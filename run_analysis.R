@@ -128,5 +128,5 @@ master6 <- master5
 #replace the dot at the end of the names with nothing
 colnames(master6) <- gsub(pattern = "[.]$",replacement= "", x = colnames(master5))
 #compute the mean of each variable per subject-actvity pair.
-meanBySubjectActivityPair <- aggregate(. ~ subject + activity, data = master6, FUN=mean)
+aggregate(. ~ subject + activity, data = master6, FUN=mean)
 #end
